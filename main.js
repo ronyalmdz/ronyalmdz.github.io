@@ -1,4 +1,4 @@
-var $ = jQuery;
+
 $(document).ready(function () {	
 
     // permitir el evento de scroll sobre el mapa al hacer clic;

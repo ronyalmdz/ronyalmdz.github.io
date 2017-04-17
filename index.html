@@ -13,7 +13,7 @@
     <link href='https://fonts.googleapis.com/css?family=Signika+Negative' rel='stylesheet' type='text/css'>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<script  src="main.js"></script>
+	
     <!-- Metas -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -35,7 +35,24 @@
         </div>
 	</div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function () {    
 
+    // permitir el evento de scroll sobre el mapa al hacer clic;
+
+    $('#map_canvas1').addClass('scrolloff'); // apagar el evento de scroll sobre el mapa
+    $('#canvas1').on('click', function () {
+        $('#map_canvas1').removeClass('scrolloff'); // encender el evento de scroll al hacer clic
+    });
+
+    // deshabilitar el evento cuando haces clic
+
+    $("#map_canvas1").mouseleave(function () {
+        $('#map_canvas1').addClass('scrolloff'); // quitar el cursor pointer cuando se mueve el mouse 
+    });
+});
+
+</script>
 
 
 </body>
